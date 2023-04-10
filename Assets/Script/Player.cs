@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     //
     PlayerController controller;
     GunController gunController;
+    readonly int fireKey01 = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
             controller.PlayerLookAt(focusPoint);
         }
         //Weapon
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(fireKey01))
         {
             gunController.PullTrigger();
         }
