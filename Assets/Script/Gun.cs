@@ -28,14 +28,15 @@ public class Gun : MonoBehaviour
     /// </summary>
     public void ProceedFire()
     {
-        if (Time.time > shotTiming && currentAmmo>=1)
+        //if (Time.time > shotTiming && currentAmmo>=1)
+        if (Time.time > shotTiming && currentAmmo >= 1)
         {
-            isReloading = false;
+            //isReloading = false;
             FireBullet();
-            if (currentAmmo <= 0)
-            {
-                isReloading = true;
-            }
+            //if (currentAmmo <= 0)
+            //{
+            //    isReloading = true;
+            //}
         }
     }
     void FireBullet()
@@ -43,7 +44,7 @@ public class Gun : MonoBehaviour
         shotTiming = Time.time + msShotCD / 1000f;
         Projectile flyingBullet = Instantiate(projectile, muzzle.position, muzzle.rotation);
         flyingBullet.SetSpeed(muzzleSpeed);
-        currentAmmo--;
+        //currentAmmo--;
     }
     private void Update()
     {
