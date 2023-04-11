@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caffcac598f1ceb408be8dde4f9ff2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 100
   moveSpeed: 5
   viewCam: {fileID: 0}
 --- !u!114 &4313254602571631145

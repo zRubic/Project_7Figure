@@ -373,10 +373,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muzzle: {fileID: 1332719878105482463}
   projectile: {fileID: 1914861519324387375, guid: 3ccb49a8ae764b742b3c5b88110cafb3, type: 3}
-  msShotCD: 100
+  msShotCD: 200
   msReloadCD: 3000
   magCap: 20
+  currentAmmo: 0
   muzzleSpeed: 35
+  isReloading: 0
 --- !u!1 &1332719878732764438
 GameObject:
   m_ObjectHideFlags: 0
