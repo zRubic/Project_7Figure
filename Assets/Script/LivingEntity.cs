@@ -6,6 +6,7 @@ using UnityEngine;
 public class LivingEntity : MonoBehaviour//,IDamagable
 {
     public float startingHealth;
+    public event System.Action OnDeathEvent;
     //protected修饰的成员，在此类，和继承此类的类中，都可以被直接调用；
     protected float health;
     protected bool isDead;
@@ -30,6 +31,10 @@ public class LivingEntity : MonoBehaviour//,IDamagable
     public void Die()
     {
         isDead = true;
+        if (OnDeathEvent!=null)
+        {
+            OnDeathEvent();
+        }
         Destroy(gameObject);
     }
 }
